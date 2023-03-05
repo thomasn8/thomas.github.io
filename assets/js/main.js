@@ -6,6 +6,9 @@
 
 (function($) {
 
+	// initialy hide all works details
+	$("section.feature").hide();
+
 	var	$window = $(window),
 		$body = $('body'),
 		$header = $('#header'),
@@ -144,7 +147,77 @@
 
 	
 	// Categories
-		// var $cat_title = $('h2.show-work');
-		// var $cat_list = $('h2.show-work');
+		var $cat_list = $('a.work');
+		var $cat_title = $('h2.show-works');
+
+		$cat_list
+			.on('click', function(event) {
+				var href = $(this).attr('href');
+				href = href.substr(1);
+				var elem = $("section.feature."+href);
+				elem.slideToggle();
+				$(this).children(":first").toggleClass('show');
+			})
+
+		$cat_title
+			.on('click', function(event) {
+				var id = $(this).attr('id');
+				var elem = $("section.feature."+id);
+				var span = $(this).children(":first");
+				elem.slideToggle();
+				span.toggleClass('show');
+				if (span.hasClass('show'))
+					span.html('View details');
+				else
+					span.html('Hide details');
+					
+				// elem.toggleClass('visible');
+				// elem.toggle('slow');
+				// elem.slideToggle();
+
+				// elem.slideToggle('medium', function() {
+				// 	if ($(this).is(':visible'))
+				// 		$(this).css('display','flex');
+				// });
+
+				// $this.find('select')
+				// .val($('option:first').val());
+
+				// x.addClass('polyfill-placeholder')
+				// .val(x.attr('placeholder')).insertAfter(i);
+
+				// config.target.toggleClass(config.visibleClass);
+
+				// $this.find('a')
+
+				// href = $this.attr('href'),
+			})
+
+		// Href
+			$('a[href^="#"]').on('click', function(event) {
+				var target = $(this.getAttribute('href'));
+				if( target.length && $(this).attr('href') != '#menu') {
+					event.preventDefault();
+					$('html, body').stop().animate({
+						scrollTop: target.offset().top - 100                    
+					}, 500); 
+					
+					// if($(window).width() < 800) {
+					// 	$('html, body').stop().animate({
+					// 		scrollTop: target.offset().top - 100                    
+					// 	}, 500); 
+					// }
+					// else if($(window).width() > 800 && $(window).width() < 1200) {
+					// 	$('html, body').stop().animate({
+					// 		scrollTop: target.offset().top - 150                    
+					// 	}, 500); 
+					// }
+					// else if($(window).width() > 1200){
+					// 	$('html, body').stop().animate({
+					// 		scrollTop: target.offset().top - 100                    
+					// 	}, 500); 
+					// }                   
+				}
+			});
 
 })(jQuery);

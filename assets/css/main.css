@@ -2684,7 +2684,7 @@ input, select, textarea {
 				font-weight: 400;
 			}
 
-			ul.contact li:before {
+			/* ul.contact li:before {
 				border-radius: 100%;
 				border: solid 2px rgba(255, 255, 255, 0.125);
 				display: inline-block;
@@ -2696,7 +2696,22 @@ input, select, textarea {
 				text-align: center;
 				top: 0;
 				width: 2.5em;
-			}
+			} */
+
+			ul.contact li:before {
+				border-radius: 100%;
+				border: solid 2px rgba(255, 255, 255, 0.125);
+				display: inline-block;
+				font-size: 1.15em;
+				height: 2em;
+				left: 0;
+				line-height: 1.75em;
+				position: absolute;
+				text-align: center;
+				top: -2px;
+				width: 2em;
+			} 
+			
 
 			ul.contact li:first-child {
 				margin-top: 0;

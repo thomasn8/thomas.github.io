@@ -24,7 +24,8 @@ ul.works a {
 	border:none;
 }
 ul.works span {
-	display: block;
+	/* display: block; */
+	padding-left: 10px;
 	text-decoration: none!important;
 	opacity: 0.5;
 }
@@ -46,10 +47,6 @@ ul.works a:hover, h2.show-works:hover {
 }
 
 section.features {
-	display: none;
-}
-
-section.features.visible {
 	display: flex;
 }
 
@@ -59,10 +56,10 @@ span.show-works {
 	text-transform: none;
 	padding-left: 30px;
 	font-size: 0.97rem;
-	font-family: Sans Pro, Source Sans Pro Light, Arial, sans-serif;
+	font-family: Source Sans Pro, Source Sans Pro Light, Arial, sans-serif;
+	font-weight: normal;
 	color: rgb(164, 164, 164);
 }
-
 span.show-works::before {
 	content: "\1F4BE";
 	display: inline-block;
@@ -70,10 +67,7 @@ span.show-works::before {
 	width: 0;
 	left: -30px;
 }
-span.show-works.show {
-	
-}
-span.show-works.show::after {
+span.show-works::after {
 	content: ">";
 	display: inline-block;
 	transform: rotate(90deg) scaleX(1.25) scaleY(2);
@@ -81,16 +75,10 @@ span.show-works.show::after {
 	width: 0;
 	left: 24px;
 	top: -5px;
+	transition: all 0.25s;
 }
-span.show-works.hide {
-	
-}
-span.show-works.hide::after {
-	content: ">";
-	display: inline-block;
+span.show-works.show::after {
 	transform: rotate(-90deg) scaleX(1.25) scaleY(2);
-	position: relative;
-	width: 0;
-	left: 14px;
-	top: 7px;
+	top: 5px;
+	transition: all 0.25s;
 }
