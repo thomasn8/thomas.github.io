@@ -147,17 +147,17 @@
 
 	
 	// Categories
-		var $cat_list = $('a.work');
+		// var $cat_list = $('a.work');
 		var $cat_title = $('h2.show-works');
 
-		$cat_list
-			.on('click', function(event) {
-				var href = $(this).attr('href');
-				href = href.substr(1);
-				var elem = $("section.feature."+href);
-				elem.slideToggle();
-				$(this).children(":first").toggleClass('show');
-			})
+		// $cat_list
+		// 	.on('click', function(event) {
+		// 		var href = $(this).attr('href');
+		// 		href = href.substr(1);
+		// 		var elem = $("section.feature."+href);
+		// 		elem.slideToggle();
+		// 		$(this).children(":first").toggleClass('show');
+		// 	})
 
 		$cat_title
 			.on('click', function(event) {
