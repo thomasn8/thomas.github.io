@@ -1,0 +1,96 @@
+h2.show-works {
+	display: inline-block;
+	border-bottom: none;
+}
+
+h2.substitue {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: -20px;
+}
+
+ul.works {
+	/* list-style-type: "\1F4BB"; */
+	/* list-style-type: "\1F5A5"; */
+	list-style-type: "\1F4BE";
+	font-size: 1.2rem;
+}
+ul.works li {
+	padding-bottom: 15px;
+}
+ul.works a {
+	border:none;
+}
+ul.works span {
+	display: block;
+	text-decoration: none!important;
+	opacity: 0.5;
+}
+
+/* 
+when click on a#categoryN or on h2.show-works#categoryN
+	it took the id and ...
+		toggles class visible to section.features of the same id 
+
+		toggles class show to the span.show-works in the he of the same id
+			text: "– View works in details"
+			it toggle class hide to the span.show-works in the he of the same id
+			text: "– Hide details"
+*/
+
+ul.works a:hover, h2.show-works:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+section.features {
+	display: none;
+}
+
+section.features.visible {
+	display: flex;
+}
+
+span.show-works {
+	/* transition: 0.5s; */
+	display: block;
+	text-transform: none;
+	padding-left: 30px;
+	font-size: 0.97rem;
+	font-family: Sans Pro, Source Sans Pro Light, Arial, sans-serif;
+	color: rgb(164, 164, 164);
+}
+
+span.show-works::before {
+	content: "\1F4BE";
+	display: inline-block;
+	position: relative;
+	width: 0;
+	left: -30px;
+}
+span.show-works.show {
+	
+}
+span.show-works.show::after {
+	content: ">";
+	display: inline-block;
+	transform: rotate(90deg) scaleX(1.25) scaleY(2);
+	position: relative;
+	width: 0;
+	left: 24px;
+	top: -5px;
+}
+span.show-works.hide {
+	
+}
+span.show-works.hide::after {
+	content: ">";
+	display: inline-block;
+	transform: rotate(-90deg) scaleX(1.25) scaleY(2);
+	position: relative;
+	width: 0;
+	left: 14px;
+	top: 7px;
+}

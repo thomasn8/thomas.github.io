@@ -142,4 +142,9 @@
 
 			});
 
+	
+	// Categories
+		// var $cat_title = $('h2.show-work');
+		// var $cat_list = $('h2.show-work');
+
 })(jQuery);
