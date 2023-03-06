@@ -52,13 +52,7 @@ span.show-works {
 	color: rgb(164, 164, 164);
 	margin-top: 5px;
 }
-/* span.show-works::before {
-	content: "\1F4BE";
-	display: inline-block;
-	position: relative;
-	width: 0;
-	left: -30px;
-} */
+
 span.show-works::after {
 	content: ">";
 	display: inline-block;
@@ -96,10 +90,12 @@ img.static {
 	position:absolute;
 	background: white;
 	transition: 0.25s;
+	cursor: pointer;
 }
 img.static:hover {
 	opacity: 0;
 	transition: 0.5s;
+	cursor: pointer;
 }
 
 section.features article {
