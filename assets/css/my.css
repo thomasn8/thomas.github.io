@@ -5,6 +5,18 @@ section#banner h2.portfolio::after {
 	content: " \1F4BB";
 }
 
+h3.in_progression {
+	position: relative;
+	top: -50px;
+}
+
+@media only screen and (max-width: 736px) {
+	h3.in_progression {
+		position: relative;
+		top: -30px;
+	}
+}
+
 h2.show-works {
 	display: inline-block;
 	border-bottom: none;
@@ -18,27 +30,6 @@ h2.substitue {
 	top: -20px;
 }
 
-/* ul.works {
-	list-style-type: "\1F4BE";
-	font-size: 1.2rem;
-}
-ul.works li {
-	padding-bottom: 15px;
-}
-ul.works a {
-	border:none;
-}
-ul.works span {
-	padding-left: 10px;
-	text-decoration: none!important;
-	opacity: 0.5;
-} */
-
-/* ul.works a:hover, h2.show-works:hover {
-	text-decoration: underline;
-	cursor: pointer;
-} */
-
 h2.show-works:hover {
 	text-decoration: underline;
 	cursor: pointer;
@@ -47,7 +38,7 @@ h2.show-works:hover {
 section.features {
 	display: flex;
 }
-section#three h2.show-works {
+section#two h2.show-works {
 	font-size: 0.9em;
 }
 
@@ -59,6 +50,7 @@ span.show-works {
 	font-family: Source Sans Pro, Source Sans Pro Light, Arial, sans-serif;
 	font-weight: normal;
 	color: rgb(164, 164, 164);
+	margin-top: 5px;
 }
 span.show-works::before {
 	content: "\1F4BE";
@@ -84,7 +76,6 @@ span.show-works.show::after {
 }
 
 div.technos {
-	/* height: 200px; */
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -99,4 +90,34 @@ div.technos img {
 
 ul.contact a {
 	border: none;
+}
+
+img.static {
+	position:absolute;
+	background: white;
+	transition: 0.25s;
+}
+img.static:hover {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+section.features article {
+	padding-bottom: 20px;
+}
+
+article h4 {
+	color: aqua;
+	margin-bottom: 0;
+}
+
+article a {
+	border-bottom: none;
+}
+article a:hover {
+	text-decoration: underline;
+}
+
+article p {
+	margin-bottom: 10px;
 }
