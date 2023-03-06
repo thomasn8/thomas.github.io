@@ -8,6 +8,13 @@
 
 	// initialy hide all works details
 	$("section.feature").hide();
+	
+	// initite section works count
+	$("span.show-works").each(function() {
+		var id = $(this).parent().attr('id');
+		var count = $("article."+id).length;
+		$(this).html(`Show ${count} works`);
+	})
 
 	var	$window = $(window),
 		$body = $('body'),
@@ -156,8 +163,10 @@
 				var span = $(this).children(":first");
 				elem.slideToggle();
 				span.toggleClass('show');
-				if (span.hasClass('show'))
-					span.html('View details');
+				if (span.hasClass('show')) {
+					var count = $("article."+id).length;
+					span.html(`Show ${count} works`);
+				}
 				else
 					span.html('Hide details');
 			})
