@@ -121,3 +121,7 @@ article a:hover {
 article p {
 	margin-bottom: 10px;
 }
+
+.wrapper.spotlight:nth-child(2n - 1) .inner {
+	text-align: left;
+}
