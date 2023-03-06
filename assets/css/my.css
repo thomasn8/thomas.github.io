@@ -43,35 +43,35 @@ section#two h2.show-works {
 }
 
 span.show-works {
-	display: block;
+	/* display: block; */
 	text-transform: none;
-	padding-left: 30px;
+	/* padding-left: 30px; */
 	font-size: 0.97rem;
 	font-family: Source Sans Pro, Source Sans Pro Light, Arial, sans-serif;
 	font-weight: normal;
 	color: rgb(164, 164, 164);
 	margin-top: 5px;
 }
-span.show-works::before {
+/* span.show-works::before {
 	content: "\1F4BE";
 	display: inline-block;
 	position: relative;
 	width: 0;
 	left: -30px;
-}
+} */
 span.show-works::after {
 	content: ">";
 	display: inline-block;
-	transform: rotate(90deg) scaleX(1.25) scaleY(2);
+	transform: rotate(-90deg) scaleX(1.25) scaleY(2);
 	position: relative;
 	width: 0;
-	left: 24px;
-	top: -5px;
+	left: 15px;
+	top: 5px;
 	transition: all 0.25s;
 }
 span.show-works.show::after {
-	transform: rotate(-90deg) scaleX(1.25) scaleY(2);
-	top: 5px;
+	transform: rotate(90deg) scaleX(1.25) scaleY(2);
+	top: -5px;
 	transition: all 0.25s;
 }
 
