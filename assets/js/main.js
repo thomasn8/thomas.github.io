@@ -186,12 +186,14 @@
 			});
 
 		// play/pause gif
+			// play
 			$('.click').click(function() {
 				$(this).hide();						// button
 				$(this).next().next().show()		// gif
 				$(this).next().hide()				// png
 			});
 		
+			// pause
 			if ($('.click').data("clicked", true)) {
 				$('.gif-click').click(function() {
 					$(this).prev().prev().show();	// button
