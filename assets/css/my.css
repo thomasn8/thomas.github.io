@@ -1,9 +1,9 @@
 section#banner h2.portfolio {
 	border-bottom: none;
 }
-section#banner h2.portfolio::after {
+/* section#banner h2.portfolio::after {
 	content: " \1F4BB";
-}
+} */
 
 h3.in_progression {
 	position: relative;
