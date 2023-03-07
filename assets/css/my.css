@@ -86,18 +86,6 @@ ul.contact a {
 	border: none;
 }
 
-img.static {
-	position:absolute;
-	background: white;
-	transition: 0.25s;
-	cursor: pointer;
-}
-img.static:hover {
-	opacity: 0;
-	transition: 0.5s;
-	cursor: pointer;
-}
-
 section.features article {
 	padding-bottom: 20px;
 }
@@ -121,3 +109,49 @@ article p {
 .wrapper.spotlight:nth-child(2n - 1) .inner {
 	text-align: left;
 }
+
+.gif-click:hover {
+	cursor: pointer;
+}
+div.click {
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+	height: 100%;
+	width: 100%;
+	border: none;
+	opacity: 0.40; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 50%;
+	transition: 0.25s;
+	cursor: pointer;
+}
+div.click.white-button {
+	background-image: url('../../images/svg/play-button.svg');
+}
+div.click.black-button {
+	background-image: url('../../images/svg/play-button2.svg');
+}
+div.click.acqua-button {
+	background-image: url('../../images/svg/play-button3.svg');
+}
+div.click:hover {
+	opacity: 0.60; 
+}
+div.click:active {
+	opacity: 0.80; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

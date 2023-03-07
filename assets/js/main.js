@@ -9,6 +9,9 @@
 	// initialy hide all works details
 	$("section.feature").hide();
 	
+	// initialy hide gifs
+	$('.gif-click').hide();
+	
 	// initite section works count
 	$("span.show-works").each(function() {
 		var id = $(this).parent().attr('id');
@@ -182,4 +185,19 @@
 				}
 			});
 
+		// play/pause gif
+			$('.click').click(function() {
+				$(this).hide();						// button
+				$(this).next().next().show()		// gif
+				$(this).next().hide()				// png
+			});
+		
+			if ($('.click').data("clicked", true)) {
+				$('.gif-click').click(function() {
+					$(this).prev().prev().show();	// button
+					$(this).hide();					// gif
+					$(this).prev().show();			// png
+				});
+			}
+			
 })(jQuery);
